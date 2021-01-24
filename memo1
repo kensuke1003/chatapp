@@ -1,0 +1,15 @@
+
+refernceはデータの住所
+
+const messagesRef=db.collection("messages") // collection reference   （複数イメージ）
+const messageRef=db.collection("messages").doc(message.id) // document reference　　　（単体イメージ）
+
+<Firestore>
+
+　　　　　　　　　　　　　　　　　　　collection                                document
+
+取得前　　　　　　　　　　　　　　collection reference                       document reference  　　(データの住所)
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　↓ get()　　　onSnapshot()
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+取得後                             querySnapshot                             documentSnapshot　　　　　（取得したデータ）
